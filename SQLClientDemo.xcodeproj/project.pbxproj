@@ -17,6 +17,9 @@
 		5547FB182C77D4530020610D /* SQLClientDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547FB172C77D4530020610D /* SQLClientDemoTests.m */; };
 		5547FB222C77D4530020610D /* SQLClientDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547FB212C77D4530020610D /* SQLClientDemoUITests.m */; };
 		5547FB242C77D4530020610D /* SQLClientDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547FB232C77D4530020610D /* SQLClientDemoUITestsLaunchTests.m */; };
+		5547FB542C7875010020610D /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5547FB532C7875010020610D /* libiconv.tbd */; };
+		5547FB632C7876510020610D /* libsybdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5547FB592C7876500020610D /* libsybdb.a */; };
+		5547FB652C7876510020610D /* SQLClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547FB5E2C7876510020610D /* SQLClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5547FAF82C77D43B0020610D /* SQLClientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLClientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547FAFB2C77D43B0020610D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5547FAFC2C77D43B0020610D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5547FAFE2C77D43B0020610D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -49,11 +51,27 @@
 		5547FB0A2C77D4500020610D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5547FB0C2C77D4500020610D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5547FB0D2C77D4500020610D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5547FB132C77D4530020610D /* SQLClientDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLClientDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5547FB132C77D4530020610D /* SQLClientDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SQLClientDemoTests.xctest; path = "/Users/subbu/Projects/SQLClientDemo/build/Debug-iphoneos/SQLClientDemo.app/PlugIns/SQLClientDemoTests.xctest"; sourceTree = "<absolute>"; };
 		5547FB172C77D4530020610D /* SQLClientDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoTests.m; sourceTree = "<group>"; };
-		5547FB1D2C77D4530020610D /* SQLClientDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLClientDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5547FB1D2C77D4530020610D /* SQLClientDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SQLClientDemoUITests.xctest; path = "/Users/subbu/Projects/SQLClientDemo/build/Debug-iphoneos/SQLClientDemoUITests-Runner.app/PlugIns/SQLClientDemoUITests.xctest"; sourceTree = "<absolute>"; };
 		5547FB212C77D4530020610D /* SQLClientDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoUITests.m; sourceTree = "<group>"; };
 		5547FB232C77D4530020610D /* SQLClientDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		5547FB532C7875010020610D /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		5547FB552C7876500020610D /* SQLClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLClient.h; sourceTree = "<group>"; };
+		5547FB562C7876500020610D /* sybfront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sybfront.h; sourceTree = "<group>"; };
+		5547FB572C7876500020610D /* syberror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = syberror.h; sourceTree = "<group>"; };
+		5547FB582C7876500020610D /* sqlfront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlfront.h; sourceTree = "<group>"; };
+		5547FB592C7876500020610D /* libsybdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsybdb.a; sourceTree = "<group>"; };
+		5547FB5A2C7876500020610D /* cspublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cspublic.h; sourceTree = "<group>"; };
+		5547FB5B2C7876500020610D /* cstypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstypes.h; sourceTree = "<group>"; };
+		5547FB5C2C7876510020610D /* tds_sysdep_public.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tds_sysdep_public.h; sourceTree = "<group>"; };
+		5547FB5D2C7876510020610D /* odbcss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = odbcss.h; sourceTree = "<group>"; };
+		5547FB5E2C7876510020610D /* SQLClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLClient.m; sourceTree = "<group>"; };
+		5547FB5F2C7876510020610D /* bkpublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bkpublic.h; sourceTree = "<group>"; };
+		5547FB602C7876510020610D /* ctpublic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ctpublic.h; sourceTree = "<group>"; };
+		5547FB612C7876510020610D /* sqldb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqldb.h; sourceTree = "<group>"; };
+		5547FB622C7876510020610D /* sybdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sybdb.h; sourceTree = "<group>"; };
+		5547FB642C7876510020610D /* SQLClientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SQLClientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5547FB632C7876510020610D /* libsybdb.a in Frameworks */,
+				5547FB542C7875010020610D /* libiconv.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,21 +104,26 @@
 		5547FAEF2C77D43B0020610D = {
 			isa = PBXGroup;
 			children = (
+				5547FB5F2C7876510020610D /* bkpublic.h */,
+				5547FB5A2C7876500020610D /* cspublic.h */,
+				5547FB5B2C7876500020610D /* cstypes.h */,
+				5547FB602C7876510020610D /* ctpublic.h */,
+				5547FB592C7876500020610D /* libsybdb.a */,
+				5547FB5D2C7876510020610D /* odbcss.h */,
+				5547FB552C7876500020610D /* SQLClient.h */,
+				5547FB5E2C7876510020610D /* SQLClient.m */,
+				5547FB612C7876510020610D /* sqldb.h */,
+				5547FB582C7876500020610D /* sqlfront.h */,
+				5547FB622C7876510020610D /* sybdb.h */,
+				5547FB572C7876500020610D /* syberror.h */,
+				5547FB562C7876500020610D /* sybfront.h */,
+				5547FB5C2C7876510020610D /* tds_sysdep_public.h */,
 				5547FAFA2C77D43B0020610D /* SQLClientDemo */,
 				5547FB162C77D4530020610D /* SQLClientDemoTests */,
 				5547FB202C77D4530020610D /* SQLClientDemoUITests */,
-				5547FAF92C77D43B0020610D /* Products */,
+				5547FB522C7875010020610D /* Frameworks */,
+				5547FB642C7876510020610D /* SQLClientDemo.app */,
 			);
-			sourceTree = "<group>";
-		};
-		5547FAF92C77D43B0020610D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5547FAF82C77D43B0020610D /* SQLClientDemo.app */,
-				5547FB132C77D4530020610D /* SQLClientDemoTests.xctest */,
-				5547FB1D2C77D4530020610D /* SQLClientDemoUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5547FAFA2C77D43B0020610D /* SQLClientDemo */ = {
@@ -136,6 +161,14 @@
 			path = SQLClientDemoUITests;
 			sourceTree = "<group>";
 		};
+		5547FB522C7875010020610D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5547FB532C7875010020610D /* libiconv.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,7 +186,7 @@
 			);
 			name = SQLClientDemo;
 			productName = SQLClientDemo;
-			productReference = 5547FAF82C77D43B0020610D /* SQLClientDemo.app */;
+			productReference = 5547FB642C7876510020610D /* SQLClientDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		5547FB122C77D4530020610D /* SQLClientDemoTests */ = {
@@ -223,7 +256,7 @@
 				Base,
 			);
 			mainGroup = 5547FAEF2C77D43B0020610D;
-			productRefGroup = 5547FAF92C77D43B0020610D /* Products */;
+			productRefGroup = 5547FAEF2C77D43B0020610D;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -267,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5547FB032C77D43B0020610D /* ViewController.m in Sources */,
+				5547FB652C7876510020610D /* SQLClient.m in Sources */,
 				5547FAFD2C77D43B0020610D /* AppDelegate.m in Sources */,
 				5547FB0E2C77D4500020610D /* main.m in Sources */,
 				5547FB002C77D43B0020610D /* SceneDelegate.m in Sources */,
@@ -448,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SX9775S984;
+				DEVELOPMENT_TEAM = 2HT966294A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SQLClientDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,6 +493,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQLClient",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.subbu.SQLClientDemo;
@@ -475,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SX9775S984;
+				DEVELOPMENT_TEAM = 2HT966294A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SQLClientDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,6 +525,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SQLClient",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.subbu.SQLClientDemo;
