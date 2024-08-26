@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UITextField *tableNameField;
 @property (nonatomic, strong) UIButton *connectButton;
 @property (nonatomic, strong) UIButton *countButton;
+@property (nonatomic, strong) SQLClient *client;
 
 @end
 
@@ -33,7 +34,6 @@
     // Do any additional setup after loading the view.
     
     [self setupUI];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(error:) name:SQLClientErrorNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(message:) name:SQLClientMessageNotification object:nil];
 }
@@ -65,6 +65,7 @@
     self.dbUserPassword.placeholder = @"Enter Password";
     self.dbUserPassword.borderStyle = UITextBorderStyleRoundedRect;
     self.dbUserPassword.translatesAutoresizingMaskIntoConstraints = NO;
+    self.dbUserPassword.secureTextEntry = YES;
     [self.view addSubview:self.dbUserPassword];
     
     // Setup tableNameField
@@ -133,8 +134,8 @@
         return;
     }
     
-    SQLClient *client = [SQLClient sharedInstance];
-    [client connect:dbInstance username:dbUserName password:dbPassword database:dbName completion:^(BOOL success) {
+    self.client = [SQLClient sharedInstance];
+    [self.client connect:dbInstance username:dbUserName password:dbPassword database:dbName completion:^(BOOL success) {
         if (success) {
             [self showAlertWithTitle:@"Success" message:[NSString stringWithFormat:@"Connected to %@", dbName]];
         } else {
@@ -152,17 +153,26 @@
     }
     
     NSString *query = [NSString stringWithFormat:@"SELECT COUNT(*) FROM %@", tableName];
-    
-    SQLClient *client = [SQLClient sharedInstance];
-    [client execute:query completion:^(NSArray *results) {
-        if (results.count > 0) {
-            NSDictionary *row = results.firstObject;
-            NSNumber *count = row.allValues.firstObject;
-            [self showAlertWithTitle:@"Row Count" message:[NSString stringWithFormat:@"Number of rows: %@", count]];
-        } else {
-            [self showAlertWithTitle:@"Error" message:@"Failed to retrieve row count"];
-        }
-    }];
+    @try {
+        [self.client execute:query completion:^(NSArray *results) {
+            if (results.count > 0) {
+                NSArray *resultSet = results.firstObject;
+                NSDictionary *result = [resultSet firstObject];
+                NSArray *values = [result allValues];
+                id count = nil;
+                if([values count] != 0)
+                    count = [values objectAtIndex:0];
+                [self showAlertWithTitle:@"Row Count" message:[NSString stringWithFormat:@"Number of rows: %@", count]];
+            } else {
+                [self showAlertWithTitle:@"Error" message:@"Failed to retrieve row count"];
+            }
+        }];
+    }@catch (NSException *exception) {
+        // Handle the exception
+        [self showAlertWithTitle:@"Excetion" message:[NSString stringWithFormat:@"Exception occurred: %@, %@", exception.name, exception.reason]];
+        // Optionally rethrow the exception if you want it to propagate further
+        // @throw;
+    }
 }
 
 - (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {

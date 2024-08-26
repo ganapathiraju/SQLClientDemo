@@ -40,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551F86152C7BAA6900FE90DA /* SQLClientDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLClientDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551F86162C7BAA6900FE90DA /* SQLClientDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLClientDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5547FAFB2C77D43B0020610D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5547FAFC2C77D43B0020610D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5547FAFE2C77D43B0020610D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -51,9 +53,7 @@
 		5547FB0A2C77D4500020610D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5547FB0C2C77D4500020610D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5547FB0D2C77D4500020610D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5547FB132C77D4530020610D /* SQLClientDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SQLClientDemoTests.xctest; path = "/Users/subbu/Projects/SQLClientDemo/build/Debug-iphoneos/SQLClientDemo.app/PlugIns/SQLClientDemoTests.xctest"; sourceTree = "<absolute>"; };
 		5547FB172C77D4530020610D /* SQLClientDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoTests.m; sourceTree = "<group>"; };
-		5547FB1D2C77D4530020610D /* SQLClientDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SQLClientDemoUITests.xctest; path = "/Users/subbu/Projects/SQLClientDemo/build/Debug-iphoneos/SQLClientDemoUITests-Runner.app/PlugIns/SQLClientDemoUITests.xctest"; sourceTree = "<absolute>"; };
 		5547FB212C77D4530020610D /* SQLClientDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoUITests.m; sourceTree = "<group>"; };
 		5547FB232C77D4530020610D /* SQLClientDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLClientDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
 		5547FB532C7875010020610D /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -123,6 +123,8 @@
 				5547FB202C77D4530020610D /* SQLClientDemoUITests */,
 				5547FB522C7875010020610D /* Frameworks */,
 				5547FB642C7876510020610D /* SQLClientDemo.app */,
+				551F86152C7BAA6900FE90DA /* SQLClientDemoTests.xctest */,
+				551F86162C7BAA6900FE90DA /* SQLClientDemoUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,7 +206,7 @@
 			);
 			name = SQLClientDemoTests;
 			productName = SQLClientDemoTests;
-			productReference = 5547FB132C77D4530020610D /* SQLClientDemoTests.xctest */;
+			productReference = 551F86152C7BAA6900FE90DA /* SQLClientDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5547FB1C2C77D4530020610D /* SQLClientDemoUITests */ = {
@@ -222,7 +224,7 @@
 			);
 			name = SQLClientDemoUITests;
 			productName = SQLClientDemoUITests;
-			productReference = 5547FB1D2C77D4530020610D /* SQLClientDemoUITests.xctest */;
+			productReference = 551F86162C7BAA6900FE90DA /* SQLClientDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -481,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2HT966294A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SQLClientDemo/Info.plist;
@@ -490,6 +492,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,7 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 2HT966294A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SQLClientDemo/Info.plist;
@@ -522,6 +525,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
